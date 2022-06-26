@@ -8,10 +8,8 @@ function ToDo() {
     const [todos, setTodos] = useState([])
 
     function createTodo() {
-        setTodos(oldTodos => {
-            setTask('')
-            return [...oldTodos, { todo: task, id: globalID++ }]
-        })
+        setTodos([...todos, {todo: task, id: globalID++}]);
+        setTask('');
     }
 
     function checkEnterKey(event) {
