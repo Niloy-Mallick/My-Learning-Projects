@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: #f5f5f5;
+}
+
+.container {
+    max-width: 960px;
+    margin: 100px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+/* Responsible to create columns of the grid. Each 1fr represents a column and is size for the column. The direction of the sizing is horizontal i.e width is controlled. */
+
+/*    column-gap: 10px;
+    row-gap: 10px; */
+
+/*    grid-auto-rows: minmax(200px, auto); */ 
+/* Adjusts size of the rows. minmax as name suggests takes a minimum size of the row and the maximum size of the row */
+
+/*    grid-template-rows: 1fr 1fr 1fr ;  */
+/* Responsible to create rows of the grid. Each size represents a row and is size for the row. The direction of the sizing is vertical. The height of the largest grid item is applied to all others by default */
+
+/* align-items: stretch;  Stretch is the default value even when align-items is not defined, it results in all the grid item cells to take up the size of the largest cell [Due to the text of the grid item]*/
+
+   align-items: start; /* Setting the value to start ensures that the height of other cells are not affected by the height of the largest cell item in the grid*/
+
+ /*
+    align-items: center;    Aligns the cell to center given the cell has some height due to some other adjacent cell
+    align-items: end;       Aligns the cell to the bottom given the cell has some height due to some other adjacent cell
+ */
+
+ /*
+    justify-content: 
+ */
+}
+
+.item {
+    background: steelblue;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    border: skyblue 1px solid;
+}
+
